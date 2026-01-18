@@ -1,12 +1,5 @@
-# The_Royal_Game_Of_Ur
-
- ,-.                  ,-.        .  .                                         
-/                    /   \  ,-   |  |                                        
-| -. ,-: ;-.-. ,-.   |   |  |    |  | ;-.                                     
-\  | | | | | | |-'   \   /  |-   |  | |                                     
- `-' `-` ' ' ' `-'    `-'   |    `--` '                                       
-                           -'                                                 
-                                                                              
+# The Royal Game Of Ur
+                                                            
 A long time ago, this game was as common as chess. You could go anywhere and  
 people would know how to play it.                                             
                                                                               
