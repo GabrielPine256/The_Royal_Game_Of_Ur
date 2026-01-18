@@ -39,9 +39,8 @@ int roll(const bool color = 0) {
     attroff(COLOR_PAIR(color+1)); 
     return result; 
 }
-/*
-// Prank version
-int roll(const bool color = 0) { 
+
+int prank_roll(const bool color = 0) { 
     attron(COLOR_PAIR(color+1));
     mvaddstr(18, 0, "  +   +   +   =  "); 
     int result = 0; 
@@ -55,7 +54,7 @@ int roll(const bool color = 0) {
     attroff(COLOR_PAIR(color+1)); 
     return result; 
 }
-*/
+//*/
 
 void draw(const int index, const vector<int>& indexes, const bool highlight = false) { 
     
@@ -156,7 +155,7 @@ int restore_sort(const int i, vector<T>& vec) {
 }
 
 
-void make_move(int choice, const int roll, vector<int>& indexes) { 
+void make_move(int& choice, const int roll, vector<int>& indexes) { 
     if (choice == -1) {
         await_enter(); // Let player see they have no moves. 
         return;
@@ -195,7 +194,8 @@ private:
 
 void Game::step(const bool color) { 
     const int rolled = roll(color);
-    const int choice = choose(get_choices(rolled, color, indexes), indexes);  
+    //const int rolled = prank_roll(color);
+    int choice = choose(get_choices(rolled, color, indexes), indexes);  
     make_move(choice, rolled, indexes);  
     if (count(rosettes.begin(), rosettes.end(), indexes[choice]%16)) { step(color); } 
 }
